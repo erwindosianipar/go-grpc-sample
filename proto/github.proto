@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option go_package = "/proto";
+
+// Response
+message GithubOutput {
+    string login = 1;
+    string name = 2;
+    string bio = 3;
+    string blog = 4;
+}
+
+// Request
+message GithubInput {
+    string username = 1;
+}
+
+// Service
+service GithubService {
+    rpc Github (GithubInput) returns (GithubOutput) {}
+}
