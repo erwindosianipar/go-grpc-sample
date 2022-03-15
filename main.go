@@ -9,8 +9,8 @@ import (
 	"net/http"
 
 	"github.com/erwindosianipar/go-grpc-sample/proto"
-	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
 
+	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
 	"google.golang.org/grpc"
 )
 

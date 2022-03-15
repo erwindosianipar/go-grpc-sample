@@ -27,9 +27,9 @@ Content-Type: application/json
 make protobuf
 ```
 
-> Generate protobuf gateway file
-
 ## Gateway
+
+> Generate protobuf gateway file
 
 ``` bash
 make gateway
