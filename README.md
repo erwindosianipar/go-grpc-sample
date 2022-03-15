@@ -4,28 +4,33 @@
 
 ## Serve
 
-> Run server and client then hit API to make request
+> Run the gRPC server and client
 
 ``` bash
-make server -B
-```
-
-``` bash
-make client -B
+make run
 ```
 
 ## API
 
+> Fetch Github account with username given
+
 ``` bash
-curl http://localhost:8080/erwindosianipar
+GET http://localhost:50052/github/{username}
+Content-Type: application/json
 ```
 
-## Generate
+## Protobuf
+
+> Generate gRPC protobuf file
 
 ``` bash
-protoc proto/github.proto \
---go_out=. \
---go_opt=paths=source_relative \
---go-grpc_out=. \
---go-grpc_opt=paths=source_relative
+make protobuf
+```
+
+> Generate protobuf gateway file
+
+## Gateway
+
+``` bash
+make gateway
 ```

@@ -2,6 +2,8 @@ syntax = "proto3";
 
 option go_package = "/proto";
 
+import "google/api/annotations.proto";
+
 // Response
 message GithubOutput {
     string login = 1;
@@ -17,5 +19,9 @@ message GithubInput {
 
 // Service
 service GithubService {
-    rpc Github (GithubInput) returns (GithubOutput) {}
+    rpc Github (GithubInput) returns (GithubOutput) {
+        option (google.api.http) = {
+            get: "/github/{username}"
+        };
+    }
 }
