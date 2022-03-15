@@ -1,2 +1,7 @@
 GET http://localhost:50052/github/erwindosianipar
 Content-Type: application/json
+
+###
+
+GET http://localhost:50052/github/github
+Content-Type: application/json
